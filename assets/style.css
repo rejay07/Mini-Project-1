@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url(script.js);
+:root {
+    --grey: #EEEEEE;
+    --green: #285430;
+    --hard: #1b2c1e;
+    --moderate: #5F8D4E ;
+    --easy: #8bb67c ;
+    --shadow: #738d78be;
+    --text-shadow: 1px 1px #738d78be;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar {
+    z-index: 90;
+}
+.navbar-brand {
+    font-weight:700;
+    text-transform: uppercase;
+    text-shadow: var(--text-shadow);
+}
+.nav-item .fa-solid{
+    color: var(--green);
+}
+.nav-item .fw-bold{
+    color: var(--green);
+}
+.nav-item .fw-bold:hover {
+    color: var(--hard);
+}
+.fa-solid.fa-user:hover {
+    color: var(--hard);
+}
+.offcanvas-body {
+    background-color: var(--grey);
+}
+.offcanvas-header {
+    color: var(--green);
+    background-color: var(--grey);
+}
+.btn-trail{
+    border-color: 5px solid var(--green);
+}
+.form-check-input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+.form-control.input-search:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+.form-control.input-password:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+.btn.btn-outline-success {
+    border-color: var(--green);
+    color: var(--green);
+}
+.btn.btn-outline-success:hover{
+   background-color: var(--green);
+
+}
+.btn.btn-outline-secondary:hover {
+    background-color: var(--green);
+}
+.about-brand{
+    text-shadow: var(--text-shadow);
+}
+.about-text i{
+    text-shadow: var(--text-shadow);
+}
+.about-text p{
+    font-size: 14px;
+}
+.carousel-inner{
+    height: cover;
+}
+.bg-color{
+    background-color: var(--green);
+}
+.trail {
+    color: var(--green);
+}
+.trail-frame {
+    width: 300px;
+    overflow: hidden;
+    height: 150px;
+}
+.trail-frame img {
+    width: 300px;
+}
+.trail-frame img:hover {
+    transition: .7s; 
+    transform: scale(1.2);
+} 
+.location {
+    font-size: 14px;
+}
+.tr-hard{
+    color: var(--hard);
+}
+.tr-moderate{
+    color: var(--moderate);
+}
+.tr-easy {
+    color: var(--easy);
+}
+.trail-location {
+    font-size: 14px;
+}
+.trail-info span{
+    text-align: left;
+}
+.trail-specification {
+    font-size: 12px;
+}
+.fa-circle {
+    font-size: 6px;
+}
+section {
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+}
+.about-logo {
+    width: 300px;
+    font-size: 35px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green);
+}
+.about-text {
+    width: 700px;
+}
+
+.frame {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+}
+.frame img{
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+.testimonials {
+    width: 500px;
+    background-color: var(--green);
+}
+.text-frame {
+    height: 200px;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    font-size:16px;
+}
+.carousel-section {
+    height: 200px;
+    padding: 20px;
+}
+.guide-meet, .guides {
+    color: var(--green);
+}
+.guide-discipline {
+    font-size: 12px;
+}
+.guide {
+    margin: 0;
+    padding: 0;
+}
+.fw-bolder {
+    color: var(--green);
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+.custom-trail:hover {
+    transition: .7s; 
+    transform: scale(1.1);
+}
+.sign-up {
+    color: var(--green);
+}
+footer {
+    background-color: var(--green);
+}
+.brand-name {
+    color: var(--grey);
+    text-transform: uppercase;
+}
+.footer-text p{
+    color: var(--grey);
+    margin: 0;
+    font-size: 12px;
+}
+.contact {
+    color: var(--grey);
+    font-size: medium;
+}
+.icons i{
+    font-size: 25px;
+    padding: 0 5px 0 5px;
+}
+.schedules {
+    font-size: 14px;
+}
+.options {
+    width: auto;
+}
+.scrollmenu ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+div.scrollmenu {
+    height: fit-content;
+    overflow: auto;
+    white-space: nowrap;
+}
+div.scrollmenu .trail-scroll {
+    display: inline-block;
+    text-align: center;
+}
+  
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+.snaps-inline {
+    scroll-snap-type: inline mandatory;   
+}
+.snaps-inline > * {
+    scroll-snap-align: start;
+    scroll-padding-inline: 10px;
+}
+/* width */
+.scrollmenu::-webkit-scrollbar {
+    width: 20px;
+}
+  /* Track */
+.scrollmenu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}  
+  /* Handle */
+.scrollmenu::-webkit-scrollbar-thumb {
+    background: var(--green); 
+    border-radius: 10px;
+}  
+  /* Handle on hover */
+.custom-frame {
+    background-color: var(--green);
+    padding: 15px 15px;
+    color: var(--grey);
+}
+.rides-header {
+    color: var(--green);
+}
+.map-custom{
+    border: 10px solid var(--green);
+}
+.scrollmenu::-webkit-scrollbar-thumb:hover {
+    background: var(--easy); 
+}
+.difficulty-header{
+    color: var(--green);
+}
+.modal-content.modal-color {
+    background-color: var(--green);
+}
+.sign-carousel {
+    margin-top: -15px;
+}
+.btn.btn-outline-light{
+    border-radius: 2px solid var(--gray);
+    color: var(--grey);
+}
+.btn.btn-outline-light:hover{
+    background-color: var(--green);
+    border-radius: 2px solid var(--gray);
+    color: var(--grey);
+}
+.trail-custom {
+    width: 50%;
+}
+@media (max-width:750px) {
+    .trail-custom {
+        width: 75%;
+    }
+}
+@media (min-width:1200px) {
+    .carousel-hero {
+        margin-top: -56px;
+    }
+}
+@media (max-width: 440px) {
+    .carousel-section {
+        height: 300px;
+    }
+    .text-frame {
+        height: 250px;
+        padding: 10px 10px;
+    }
+
+}

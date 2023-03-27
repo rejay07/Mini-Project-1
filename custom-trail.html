@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="assets/script.js"></script>
+        <script src="https://kit.fontawesome.com/206a2fb96f.js" crossorigin="anonymous"></script>
+        <title>Crank Kings</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/mountain.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #dddddd;">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-md shadow-sm" style="background-color: #dddddda2;">
+            <div class="container-lg d-flex justify-content-between">
+                <div>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo01.png" style="width: 75px;" alt="">
+                        <span style="color: #285430;">
+                            Crank Kings
+                        </span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-row justify-content-evenly">
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link active" aria-current="page" href="explore.html">
+                                <span class="fw-bold">Explore</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4"> 
+                            <a class="nav-link active" aria-current="page" href="rides.html" title="Rides">
+                                <span class="fw-bold">Rides</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link active" aria-current="page" href="custom-trail.html" title="Custom Trail">
+                                <span class="fw-bold">Customize</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-user fs-5">
+                                </i>
+                            </button>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+        <!-- modal pop -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-color">
+                    <div class="modal-body pt-5">
+                        <div class="row mb-3">
+                            <div class="col">
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control input-search" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                        <div class="row mt-1 mb-2">
+                            <div class="col">
+                            </div>
+                            <div class="col-8 show-password">
+                                <input type="password" id="myInput" class="form-control input-password mb-2" placeholder="Password">
+                                <input type="checkbox" class="show-password"  onclick="myFunction()">
+                                <span class="text-light">Show Password</span>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="create-trail pb-4">
+                            <button type="button" class="btn btn-outline-light mx-auto border border-2 rounded-4 btn d-flex text-center" style="width: fit-content; height: fit-content;">                        
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <span>Log In</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal end -->
+        <!-- Costumize Trail -->
+        <div class="trail-custom container-lg mt-5">
+            <div class="frame-custom container-fluid d-flex flex-column flex-md-row ps-0 align-items-center">
+                <div class="custom-frame container-fluid rounded-3 shadow d-flex flex-wrap flex-column flex-md-row" style="height: fit-content;">
+                    <h4 class="fw-bold mx-auto mb-4">Customize Trail</h4>
+                    <div class="flex-column container">
+                        <input type="text" class="form-control input-search mb-2" placeholder="Trail Name">
+                        <div class="d-flex flex-row">
+                            <span class="fw-bold" style="width: 160px;">Trail Difficulty:</span>
+                            <div class="difficulties container-fluid d-flex flex-column flex-md-row justify-content-evenly mb-2">
+                                <div class="form-check pe-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Hard
+                                    </label>
+                                </div>
+                                <div class="form-check pe-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Moderate
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Easy
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <span class="fw-bold" style="width: 160px;">Discipline:</span>
+                            <div class="difficulties container-fluid d-flex flex-column flex-md-row justify-content-evenly mb-2">
+                                <div class="form-check pe-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Downhill
+                                    </label>
+                                </div>
+                                <div class="form-check pe-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Gravel
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Road
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row d-flex flex-column text-center mb-3">
+                                <div class="col mb-1">
+                                    <input type="text" class="form-control input-search" placeholder="Starting Point" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </div>
+                                <span class="col my-auto mb-1">To</span>
+                                <div class="col">
+                                    <input type="text" class="form-control input-search" placeholder="Last Point" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="row d-flex flex-wrap flex-row text-center">
+                                <div class="col">
+                                    <input type="text" class="form-control input-search" placeholder="Distance" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control input-search" placeholder="Elavation" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control input-search" placeholder="Duration" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="create-trail">
+                            <button type="button" class="btn btn-outline-light mx-auto border border-2 rounded-4 btn d-flex text-center" style="width: fit-content; height: fit-content;">                        
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <span>Create Trail</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 container-fluid">
+                    <iframe class="map-custom container-fluid ps-0 pe-0 rounded-3 shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18976.54370477748!2d123.96010065530012!3d10.59158561438089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9ae2925dbfe29%3A0xdf19a757755ded73!2sSantican%2C%20Danao%20City%2C%20Cebu!5e1!3m2!1sen!2sph!4v1679899566910!5m2!1sen!2sph" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Hard-Trails -->
+        <h3 class="rides-header container-lg fw-bold mx-auto text-center mt-5">Rides Schedules</h3>
+        <div class="option-frame container-lg mt-3">
+            <div class="difficulty-header mb-3">
+                <h4 class="fw-bold">Hard Trails</h4>
+                <div class="schedules d-flex flex-column">
+                    <span>Saturdays and Sunday: starts at 6:00 a.m | 3:00 p.m.</span>
+                    <span>Guides: James Kelly | Todd Starness | Spencer Harding</span>
+                </div>
+            </div>
+            <div class="scrollmenu d-flex flex-row container-lg snaps-inline">
+                <!-- trail 1 -->
+                <div class="trail-scroll d-flex flex-column justify-content-center mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/p6pb17265543.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Busay Bike Park</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Busay Bike Park</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>30 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1000ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>10.5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 2 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/bike-tours.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Pamutan Trails</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Pamutan Trails</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Balamban, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>40 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1600ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>11.5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 3 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/mountainbiking_moalboal.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold ">Moalboal Trail</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold ">Moalboal Trail</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Moalboal, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>26 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1010ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 4 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/sandayung.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Sandayung Sur Course</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Sandayung Sur Course</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Danao City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>30 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1700ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>4hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 5 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/santican.jpeg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Santican Park</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Santican Park</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Carmen, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>30 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1160ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 6 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/liloan.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Viper's Bike Park</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Viper's Bike Park</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Liloan, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>29 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1600ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 7 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/bike-tours.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Hard</span> -->
+                                <span class="trail-name fw-bold">Balamban Trail</span>
+                                <div class="tr-hard">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Balamban Trail</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>60 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1000ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Moderate-Trails -->
+        <div class="option-frame container-lg mt-5">
+            <div class="difficulty-header mb-3">
+                <h4 class="fw-bold">Moderate Trails</h4>
+                <div class="schedules d-flex flex-column">
+                    <span>Saturdays and Sunday: starts at 6:00 a.m | 3:00 p.m.</span>
+                    <span>Guide: Spencer Harding | Charley Erickson |Renee MacCanles</span>
+                </div>
+            </div>
+            <div class="scrollmenu d-flex flex-row container-lg snaps-inline">
+                <!-- trail 1 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate1.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">Biga Pit Trail</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Biga Pit Trail</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>30 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>500ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 2 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate2.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">Campo Tres</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Campo Tres</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Talisay, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>30 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1600ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 3 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate3.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold ">Monteray</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold ">Monteray</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Pinamungahan, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>25 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1000ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>6hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 4 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate4.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">Cebu Safari Trail</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Cebu Safari Trail</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Carmen, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>15 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1600ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>3hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 5 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate5.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">Tambayan ni Tirso</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Tambayan ni Tirso</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Carmen, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>26 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1700ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>7hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 6 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate6.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">The Highlands</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">The Highlands</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>27 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1060ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 7 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/moderate7.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Moderate</span> -->
+                                <span class="trail-name fw-bold">Bitlang Riders Place</span>
+                                <div class="tr-moderate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Bitlang Riders Place</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Naga, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>33 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>700ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Easy-Trails -->
+        <div class="option-frame container-lg mt-5">
+            <div class="difficulty-header mb-3">
+                <h4 class="fw-bold">Easy Trails</h4>
+                <div class="schedules d-flex flex-column">
+                    <span>Saturdays and Sunday: starts at 6:00 a.m | 3:00 p.m.</span>
+                    <span>Guides: Renee McCanles | Charley Erickson | James Kelly</span>
+                </div>
+            </div>
+            <div class="scrollmenu d-flex flex-row container-lg snaps-inline">
+                <!-- trail 1 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/bike-kids.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">MTB Kids</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">MTB Kids</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>3 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>160ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>2hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 2 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/mtb-kids2.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">Childrens Bike Park</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Childrens Bike Park</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Talisay, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>10 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1060ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 3 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/kids-3.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold ">Compostela Trail</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold ">Compostela Trail</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Compostela, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>15 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>300ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>4hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 4 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/kids-4.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">Mini Sharks</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Mini Sharks</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Moalboal, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>12 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>100ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>3hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 5 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/kids-5.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">Knarly Park</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- <span class="trail-name fw-bold">Knarly Park</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cebu City, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>16 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1000ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>2hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 6 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/kids6.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">Cordova Park</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                                <!-- <span class="trail-name fw-bold">Cordova Park</span> -->
+                                <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Cordova, Cebu
+                                </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>7 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>160ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>1.5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- trail 7 -->
+                <div class="trail-scroll d-flex flex-column mx-auto ms-5 me-5" style="width: 300px; height: 225px;">
+                    <div class="trail d-flex flex-column justify-content-center">
+                        <div class="trail-frame mb-2 rounded-3 shadow">
+                            <a href="#">
+                                <img src="assets/images/kids7.jpg" alt="">
+                            </a>
+                        </div> 
+                        <div class="trail-info d-flex flex-wrap flex-column text-center">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <span class="trail-difficulty">Easy</span> -->
+                                <span class="trail-name fw-bold">Tabla Course</span>
+                                <div class="tr-easy">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                                 <!-- <span class="trail-name fw-bold">Tabla Course</span> -->
+                            <span class="trail-location">
+                                <i class="fa-solid fa-location-dot pe-1"></i>Liloan, Cebu
+                            </span>
+                            <div class="trail-specification d-flex flex-row align-items-center justify-content-evenly">
+                                <span>14 km</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>170ft</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>2.5hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of trail options -->
+        <!-- Sign Up -->
+        <div class="sign-up w-75 d-flex flex-column container mt-4">
+            <span class="fs-3 mx-auto my-1 text-center">Let us take you on a spin
+                <button type="button" class="btn btn-outline-success mx-auto mt-3 rounded-4 btn d-flex text-center my-1" style="width: fit-content; height: fit-content;">                        
+                    <a class="nav-link active" href="sign-up.html">
+                        <span>Sign Up</span>
+                    </a>
+                </button>
+            </span>
+        </div>
+        <footer class="mt-4 p-auto container-fluid">
+            <div class="brand-logo d-flex flex-column pt-4 container-fluid">
+                <img src="assets/images/logo-grey.png" class="mx-auto" alt="" style="width: 150px;">
+                <span class="brand-name fs-4 fw-medium mx-auto">Crank Kings</span>
+            </div>
+            <div class="contact pt-2 pb-3">
+                <div class="contact-info mx-auto text-center" style="width: 300px;">
+                    <p class="mb-2">Contact Us</p>
+                    <div class="icons">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-square-pinterest"></i>
+                        <i class="fa-brands fa-square-snapchat"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text container-sm text-center mx-auto">
+                <p>
+                    2023 CRANK KINGS, CC. All Rights Reserved
+                </p>
+                <p>
+                    CRANK KINGS® and the PEDAL HEADS Design are registered trademarks of Crank Kings, CC. in the Cebu Philippines as well as certain other jurisdictions.
+                </p>
+                <p class="pb-4">
+                    PEDAL TO THE TOP™ is a trademark of Crank Kings, CC.
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

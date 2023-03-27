@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://kit.fontawesome.com/206a2fb96f.js" crossorigin="anonymous"></script>
+        <script src="assets/script.js"></script>
+        <title>Crank Kings</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/mountain.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #dddddd;">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-md shadow-sm" style="background-color: #dddddda2;">
+            <div class="container-lg d-flex justify-content-between">
+                <div>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo01.png" style="width: 75px;" alt="">
+                        <span style="color: #285430;">
+                            Crank Kings
+                        </span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-row justify-content-evenly">
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link active" aria-current="page" href="explore.html">
+                                <span class="fw-bold">Explore</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4"> 
+                            <a class="nav-link active" aria-current="page" href="rides.html" title="Rides">
+                                <span class="fw-bold">Rides</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link active" aria-current="page" href="custom-trail.html" title="Custom Trail">
+                                <span class="fw-bold">Customize</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-user fs-5">
+                                </i>
+                            </button>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+        <!-- modal pop -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-color">
+                    <div class="modal-body pt-5">
+                        <div class="row mb-3">
+                            <div class="col">
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control input-search" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                        <div class="row mt-1 mb-2">
+                            <div class="col">
+                            </div>
+                            <div class="col-8 show-password">
+                                <input type="password" id="myInput" class="form-control input-password mb-2" placeholder="Password">
+                                <input type="checkbox" class="show-password"  onclick="myFunction()">
+                                <span class="text-light">Show Password</span>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="create-trail pb-4">
+                            <button type="button" class="btn btn-outline-light mx-auto border border-2 rounded-4 btn d-flex text-center" style="width: fit-content; height: fit-content;">                        
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <span>Log In</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal end -->
+        <!-- Sign Up -->
+        <div class="trail-custom mt-5 mx-auto">
+            <div class="custom-frame container-lg mx-auto rounded-3 shadow d-flex flex-column" style="height: fit-content;">
+                <h4 class="fw-bold mx-auto mb-4">Sign Up</h4>
+                <div class="flex-column container">
+                    <div class="row d-flex flex-column flex-md-row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="First Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Last Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-column flex-md-row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Province" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="City/Municipality" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-column flex-md-row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Barangay" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Streed Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-column flex-md-row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Mobile Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="col mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <span class="fw-bold mx-auto mb-2">Discipline:</span>
+                        <div class="difficulties container-fluid d-flex flex-column flex-md-row justify-content-evenly mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Downhill
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Gravel
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Road
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Enduro
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row mt-1 mb-2 d-flex flex-column flex-md-row">
+                            <div class="col-12 col-md-4">
+                            </div>
+                            <div class="col-12 col-md-4 show-password">
+                                <input type="password" id="my-Input" class="form-control input-password mb-2" placeholder="Password">
+                                <input type="checkbox" class="show-password"  onclick="myFunction()">
+                                <span class="text-light">Show Password</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-trail">
+                        <button type="button" class="btn btn-outline-light mx-auto border border-2 rounded-4 btn d-flex text-center" style="width: fit-content; height: fit-content;">                        
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <span>Create Account</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Meet Our Guides -->
+         <div class="guide-meet text-center mt-5 mb-4">
+            <h2>Meet Our Guides</h2>
+        </div>
+        <div class="guides d-flex flex-column flex-md-row container-fluid">
+            <div class="guide d-flex flex-column text-center mx-auto mt-3" style="height: fit-content; width: 300px;">
+                <img class="rounded-circle mx-auto mb-2 shadow" src="assets/images/Spencer Harding.jpg" style="width: 90px;" alt="">
+                <span class="fs-5 fw-bold">Spencer Harding</span>
+                <span>Carmen, Cebu</span>
+                <span class="guide-discipline">Mtb Trail | Downhill</span>
+            </div>
+            <div class="guide d-flex flex-column text-center mx-auto mt-3" style="width: 300px;">
+                <img class="rounded-circle mx-auto mb-2 shadow" src="assets/images/James Kelly.jpg" style="width: 90px;" alt="">
+                <span class="fs-5 fw-bold">James Kelly</span>
+                <span>Carmen, Cebu</span>
+                <span class="guide-discipline">Road | Downhill</span>
+            </div>
+            <div class="guide d-flex flex-column text-center mx-auto mt-3" style="width: 300px;">
+                <img class="rounded-circle mx-auto mb-2 shadow" src="assets/images/Renee Maccanles.jpg" style="width: 90px;" alt="">
+                <span class="fs-5 fw-bold">Renee McCanles</span>
+                <span>Carmen, Cebu</span>
+                <span class="guide-discipline">Road | Gravel</span>
+            </div>
+            <div class="guide d-flex flex-column text-center mx-auto mt-3" style="width: 300px;">
+                <img class="rounded-circle mx-auto mb-2 shadow" src="assets/images/guide4.jpg" style="width: 90px;" alt="">
+                <span class="fs-5 fw-bold">Todd Starness</span>
+                <span>Carmen, Cebu</span>
+                <span class="guide-discipline">Enduro | Downhill</span>
+            </div>
+            <div class="guide d-flex flex-column text-center mx-auto mt-3" style="width: 300px;">
+                <img class="rounded-circle mx-auto mb-2 shadow" src="assets/images/CharleyErickson.jpg" style="width: 90px;" alt="">
+                <span class="fs-5 fw-bold">Charely Erickson</span>
+                <span>Carmen, Cebu</span>
+                <span class="guide-discipline">Road | Gravel</span>
+            </div>
+        </div>
+        <!-- Custom Trail -->
+        <div class="costum-trail container-lg d-flex flex-column flex-md-row mt-5 mb-5" >
+            <div class="custom-trail box rounded-3 container-lg my-auto mb-3">
+                <img src="assets/images/path-edit.png" class="mx-2 w-100" style="height: auto ; width: auto; " alt="">
+            </div>
+            <div class="title text-center w-100 w-md-50 my-auto">
+                <h3 class="fw-bolder">Customize Your Own Trail</h3>
+                <h5>That suits your Adrenaline</h5>
+            </div>
+        </div>
+        <footer class="mt-4 p-auto container-fluid">
+            <div class="brand-logo d-flex flex-column pt-4 container-fluid">
+                <img src="assets/images/logo-grey.png" class="mx-auto" alt="" style="width: 150px;">
+                <span class="brand-name fs-4 fw-medium mx-auto">Crank Kings</span>
+            </div>
+            <div class="contact pt-2 pb-3">
+                <div class="contact-info mx-auto text-center" style="width: 300px;">
+                    <p class="mb-2">Contact Us</p>
+                    <div class="icons">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-square-pinterest"></i>
+                        <i class="fa-brands fa-square-snapchat"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text container-sm text-center mx-auto">
+                <p>
+                    2023 CRANK KINGS, CC. All Rights Reserved
+                </p>
+                <p>
+                    CRANK KINGS® and the PEDAL HEADS Design are registered trademarks of Crank Kings, CC. in the Cebu Philippines as well as certain other jurisdictions.
+                </p>
+                <p class="pb-4">
+                    PEDAL TO THE TOP™ is a trademark of Crank Kings, CC.
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>
