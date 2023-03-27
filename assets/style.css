@@ -286,7 +286,6 @@ div.scrollmenu a:hover {
 }
 .btn.btn-outline-dark:hover{
     background-color: var(--grey);
-    border-radius: 2px solid var(--gray);
     color: var(--green);
 }
 .trail-custom {
